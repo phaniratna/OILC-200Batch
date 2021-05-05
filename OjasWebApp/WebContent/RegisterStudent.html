@@ -1,0 +1,104 @@
+<html>
+<head>
+<script language="javascript">
+       function check() {
+	   		 if(document.form1.name.value=="")
+			 {  
+           		alert("Enter Your Name");
+		   		document.form1.name.focus();
+		   		return false;
+		   }
+	   	   if(document.form1.mail.value=="")  {    
+                alert("Enter email ");
+		        document.form1.mail.focus();
+		        return false;
+		   }
+		  else if(document.form1.mail.value.indexOf('@')==-1) {
+		       alert("Use @ email correctly");
+		       document.form1.mail.focus();
+		       return false;
+		  }
+		  else if(document.form1.mail.value.indexOf('.')==-1)  {
+		        alert("Use . email correctly");
+		        document.form1.mail.focus();
+		        return false;
+		  }
+	   if(document.form1.pwd.value=="") {  
+           alert("Enter password");
+		   document.form1.pwd.focus();
+		   return false;
+		 }
+	  if(document.form1.pwd.value!=document.form1.rpwd.value) {  
+           alert("Enter  same passwords");
+		   document.form1.pwd.focus();
+		   return false;
+		 }
+		  if(document.form1.rpwd.value=="")
+		 {  
+                    alert("Enter re-password");
+		   document.form1.rpwd.focus();
+		   return false;
+		 }
+		 if(document.form1.date.value=="")
+		 {  
+           alert("Enter date");
+		   document.form1.date.focus();
+		   return false;
+		 }
+		  if(document.form1.photo.value=="")
+		 {  
+           alert("select photo");
+		   document.form1.photo.focus();
+		   return false;
+		 }
+		
+		   		 
+       }
+	    window.history.forward();   
+		function noBack() 
+		{ 
+			window.history.forward(); 
+		} 
+</script></head>
+
+  <form action="StudentRegisterServlet" name="form1" id="form1" onsubmit="return check()">
+  <h1 style=background-color:navy;color:white;text-align:center;padding:30px;'> Student Registration Form </h1>
+  <table border = 1 align=center cellpadding =20px >
+  <tr>
+  <td>
+  <table>
+  
+<tr>
+  <td><B>Student name:<font color=red>*</font></B><td><INPUT TYPE="text" NAME="name"></td>
+  </tr>
+<tr>
+  <td><B>Mail-id:<font color=red>*</font></B><td><INPUT TYPE="text" NAME="mail"></td>
+  </tr>
+<tr>
+  <td><B>PassWord:<font color=red>*</font></B><td><INPUT TYPE="password" NAME="pwd"></td>
+  </tr>
+<tr>
+  <td><B>ReenterPassword:<font color=red>*</font></B><td><INPUT TYPE="password" NAME="rpwd"></td>
+  </tr>
+  <tr>
+   <td><B>DateOfBirth:<font color=red>*</font></b><td><input name="ADate"><font color="red">(mm/dd/yyyy)</font></td>
+  </tr>
+  
+
+  <tr>
+  <td><b>Uploadphoto:<b><td><input type=file name="photo"/></td></tr>
+  </table>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <INPUT TYPE="submit" value="Register" style="background:#8A887B" class=p>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <INPUT TYPE="reset" class=p value="Reset" style="background:#8A887B">
+ </td>
+ </tr>
+  </td>
+  </tr>
+  </table>
+</form>
+</center>
+</body>
+</html>

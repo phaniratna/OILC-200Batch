@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+   <script type="text/javascript">
+   	   function setHidden(temp){
+   		   document.getElementById("hiddenText").value = temp;
+   	   }
+   </script>
+</head>
+<body>
+  <form action = "PaginationDemo">
+  
+    <input type="hidden" name =  "b1" id="hiddenText" value="NEXT">
+    
+  	<input type=submit value="NEXT" onclick="setHidden('NEXT')">
+  	<input type=submit value="PREVIOUS" onclick="setHidden('PREVIOUS')">
+  </form>
+</body>
+</html>
