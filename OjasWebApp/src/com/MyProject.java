@@ -1,7 +1,7 @@
 package com;
 
 public class MyProject {
-   public void disp() {
+   public void Display() {
 	   System.out.println("welcome");
    }
 }
